@@ -1,0 +1,19 @@
+/*
+ * ------------------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 44):
+ * Author: Thimo Braker <thibmorozier@gmail.com>
+ * File: core/_oms-list-body.scss
+ *
+ * As long as you retain this notice anywhere in the file and/or the file's directory you can do
+ * whatever you want with this stuff. If we meet someday, and you think this stuff is worth it, you
+ * can buy me a beer in return.
+ * ------------------------------------------------------------------------------------------------
+ */
+.oms-list-body {
+    overflow-y: scroll;
+    height: $oms-list-body-height;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}

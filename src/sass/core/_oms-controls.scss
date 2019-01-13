@@ -1,0 +1,53 @@
+/*
+ * ------------------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 44):
+ * Author: Thimo Braker <thibmorozier@gmail.com>
+ * File: core/_oms-controls.scss
+ *
+ * As long as you retain this notice anywhere in the file and/or the file's directory you can do
+ * whatever you want with this stuff. If we meet someday, and you think this stuff is worth it, you
+ * can buy me a beer in return.
+ * ------------------------------------------------------------------------------------------------
+ */
+.oms-controls {
+    border: $oms-main-element-border;
+    z-index: $oms-controls-z-index;
+    padding: $oms-main-element-padding;
+    position: relative;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: $white-base;
+    background-clip: border-box;
+}
+
+@media (min-width: $oms-breakpoints-xs) {
+    .oms-controls {
+        -webkit-box-shadow: $z-depth-1;
+        box-shadow: $z-depth-1;
+        height: auto;
+        flex: $oms-full-flex;
+        max-width: $oms-full-max-width;
+        margin-bottom: $spacer;
+        border-radius: $md-card-border-radius;
+        -ms-flex-align: normal !important;
+        align-items: normal !important;
+    }
+}
+
+@media (min-width: $oms-breakpoints-lg) {
+    .oms-controls {
+        -webkit-box-shadow: $oms-main-element-box-shadow-center;
+        box-shadow: $oms-main-element-box-shadow-center;
+        float: left;
+        height: $oms-main-element-height;
+        flex: $oms-controls-flex;
+        max-width: $oms-controls-max-width;
+        margin-bottom: 0;
+        border-radius: 0;
+        -ms-flex-align: center !important;
+        align-items: center !important;
+    }
+}

@@ -1,0 +1,46 @@
+/*!
+ * Open Multi Select for MDBootstrap
+ * Version: 1.0.0
+ *
+ *
+ * ------------------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 44):
+ * Author: Thimo Braker <thibmorozier@gmail.com>
+ * File: openMultiSelect.scss
+ *
+ * As long as you retain this notice anywhere in the file and/or the file's directory you can do
+ * whatever you want with this stuff. If we meet someday, and you think this stuff is worth it, you
+ * can buy me a beer in return.
+ * ------------------------------------------------------------------------------------------------
+ *
+ *
+ * Documentation: https://kp-wiki.org/
+ *
+ * Support: https://kp-wiki.org/
+ *
+ * Contact: contact@kp-wiki.org
+ *
+ * Atribution: MDBootstrap, Bootstrap 4, jQuery
+ *
+ */
+
+@charset "UTF-8";
+
+// Bootstrap
+@import "ext/bootstrap/functions";
+@import "ext/bootstrap/variables";
+
+// MDBootstrap
+@import "ext/mdb/functions";
+@import "ext/mdb/variables";
+
+// Core
+@import "core/mixins";
+@import "core/variables";
+
+@import "core/oms-available-list";
+@import "core/oms-selected-list";
+@import "core/oms-controls";
+@import "core/oms-list-header";
+@import "core/oms-list-body";
+@import "core/oms-item";

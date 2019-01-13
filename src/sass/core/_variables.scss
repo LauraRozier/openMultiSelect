@@ -1,0 +1,37 @@
+/*
+ * ------------------------------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 44):
+ * Author: Thimo Braker <thibmorozier@gmail.com>
+ * File: core/_variables.scss
+ *
+ * As long as you retain this notice anywhere in the file and/or the file's directory you can do
+ * whatever you want with this stuff. If we meet someday, and you think this stuff is worth it, you
+ * can buy me a beer in return.
+ * ------------------------------------------------------------------------------------------------
+ */
+$oms-breakpoints-xs:        0;
+$oms-breakpoints-lg:        992px;
+$oms-full-max-width:        100% !default;
+$oms-full-flex:             0 0 $oms-full-max-width !default;
+
+$oms-main-element-height:                   25em !default;
+$oms-main-element-padding:                  1.25rem !default;
+$oms-main-element-border:                   0;
+$oms-main-element-box-shadow-left:          -2px 2px 5px 0 rgba(0, 0, 0, 0.16), -2px -2px 5px 0 rgba(0, 0, 0, 0.16) !default;
+$oms-main-element-box-shadow-right:         2px 2px 5px 0 rgba(0, 0, 0, 0.16), 2px -2px 5px 0 rgba(0, 0, 0, 0.16) !default;
+$oms-main-element-box-shadow-center:        0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.16) !default;
+
+$oms-controls-z-index:          901 !default;
+$oms-controls-max-width:        14rem !default;
+$oms-controls-flex:             0 0 $oms-controls-max-width !default;
+$oms-controls-half-width:       ($oms-controls-max-width / 2) !default;
+
+$oms-list-max-width:                calc(50% - #{$oms-controls-half-width}) !default;
+$oms-list-flex:                     0 0 $oms-list-max-width !default;
+$oms-list-border-radius-left:       .25rem 0 0 .25rem !default;
+$oms-list-border-radius-right:      0 .25rem .25rem 0 !default;
+
+$oms-list-body-height:      100% !default;
+
+$oms-item-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out !default;
+$oms-item-webkit-transition:        color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
