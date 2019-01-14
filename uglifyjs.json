@@ -1,0 +1,18 @@
+{
+    "toplevel": true,
+    "compress": {
+        "passes": 2
+    },
+    "mangle": {
+        "toplevel": true
+    },
+    "output": {
+        "beautify": false,
+        "quote_style": 0,
+        "preamble": "/**\n * Open Multi Select for MDBootstrap\n * Version: 1.0.0\n *\n *\n * ----------------------------------------------------------------------------\n * \"THE BEER-WARE LICENSE\" (Revision 44):\n * Author: Thimo Braker <thibmorozier@gmail.com>\n * File: openMultiSelect.min.js\n *\n * As long as you retain this notice anywhere in the file and/or the file's\n * directory you can do whatever you want with this stuff. If we meet someday,\n * and you think this stuff is worth it, you can buy me a beer in return.\n * ----------------------------------------------------------------------------\n *\n *\n * Documentation: https://kp-wiki.org/\n *\n * Support: https://kp-wiki.org/\n *\n * Contact: contact@kp-wiki.org\n *\n * Atribution: MDBootstrap, Bootstrap 4, jQuery\n *\n */"
+    },
+    "sourceMap": {
+        "filename": "openMultiSelect_compiled.js",
+        "url": "openMultiSelect.min.js.map"
+    }
+}

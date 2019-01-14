@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css" crossorigin="anonymous" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" crossorigin="anonymous" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/css/openMultiSelect/openMultiSelect.min.css" />
+        <link rel="stylesheet" href="/css/openMultiSelect.min.css" />
     </head>
     <body class="d-flex flex-column" style="min-height: 100vh">
         <main role="main" class="flex-fill pt-5 mx-md-5">
@@ -54,7 +54,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" crossorigin="anonymous"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" crossorigin="anonymous"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/js/mdb.min.js" crossorigin="anonymous"></script>
-        <script src="/js/openMultiSelect/openMultiSelect.min.js"></script>
+        <script src="/js/openMultiSelect.min.js"></script>
         <script>
             const testData1k = [
                 { "text": "test0", "value": "t0" }, { "text": "test1", "value": "t1" },
