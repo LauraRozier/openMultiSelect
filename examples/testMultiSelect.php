@@ -35,6 +35,8 @@
                     <div class="col-12">
                         <button id="btnRefresh" class="btn btn-primary">Refresh</button>
                         <button id="btnSubmit" class="btn btn-primary">Post Form</button>
+                        <button id="btnCreate" class="btn btn-green" disabled="disabled">Create new openMultiSelect Instance</button>
+                        <button id="btnDestroy" class="btn btn-red">Destroy openMultiSelect Instance</button>
                     </div>
                 </div>
                 <form id="testForm" method="POST">
@@ -563,14 +565,24 @@
                 "t898", "t129", "t925", "t206", "t425", "t716", "t502", "t669", "t643", "t470",
                 "t81", "t238", "t955", "t238", "t967",
             ];
-
-            function refreshData() {
-                $("#oms-div").openMultiSelect("setItems", testData1k, testselection1k);
+            
+            function createOMSInstance() {
+                $("#btnCreate").prop("disabled", true).off("click");
+                $("#btnDestroy").prop("disabled", false).click(destroyOMSInstance);
+                $("#oms-div").openMultiSelect().openMultiSelect("setItems", testData1k, testselection1k);
+            }
+            
+            function destroyOMSInstance() {
+                $("#btnCreate").prop("disabled", false).click(createOMSInstance);
+                $("#btnDestroy").prop("disabled", true).off("click");
+                $("#oms-div").openMultiSelect("destroy");
             }
 
             $(document).ready(function() {
-                $("#oms-div").openMultiSelect().openMultiSelect("setItems", testData1k, testselection1k);
-                $("#btnRefresh").click(refreshData);
+                createOMSInstance();
+                $("#btnRefresh").click(function() {
+                    $("#oms-div").openMultiSelect("setItems", testData1k, testselection1k);
+                });
                 $("#btnSubmit").click(function() {
                     $("#testForm").submit();
                 });
