@@ -73,7 +73,7 @@
      * The initial selection
      *
      * @property initial
-     * @type array
+     * @type {array}
      * @default []
      */
     initial: [],
@@ -81,7 +81,7 @@
      * The available items
      *
      * @property available
-     * @type array
+     * @type {array}
      * @default []
      */
     available: [],
@@ -89,7 +89,7 @@
      * The selected items
      *
      * @property selected
-     * @type array
+     * @type {array}
      * @default []
      */
     selected: [],
@@ -108,7 +108,7 @@
      * The API endpoint to use when for retrieving the available options
      *
      * @property availableUrl
-     * @type string
+     * @type {string}
      * @default ""
      */
     availableUrl: "",
@@ -116,7 +116,7 @@
      * The API endpoint to use when for retrieving the selected options
      *
      * @property selectedUrl
-     * @type string
+     * @type {string}
      * @default ""
      */
     selectedUrl: "",
@@ -124,7 +124,7 @@
      * The method to use when retrieving data from either API
      *
      * @property method
-     * @type string
+     * @type {string}
      * @default "GET"
      */
     method: "GET",
@@ -916,7 +916,7 @@
   };
 
   /**
-   * Initialize openMultiSelect. Applied to jQuery object.
+   * The default settings for openMultiSelect.
    *
    * @property $.fn.openMultiSelect.defaults
    *
@@ -942,7 +942,7 @@
      * The ajax settings to use when using a JSON API to load data.
      *
      * @property name
-     * @type string
+     * @type {string}
      * @default "oms-value-input"
      */
     name: "oms-value-input",
@@ -950,7 +950,7 @@
      * The ajax settings to use when using a JSON API to load data.
      *
      * @property ajax
-     * @type Object
+     * @type {Object}
      * @default null
      */
     ajax: null,
@@ -958,7 +958,7 @@
      * The color scheme to use for the available list item elements.
      *
      * @property availableItemColor
-     * @type string
+     * @type {string}
      * @default "red"
      */
     availableItemColor: "red",
@@ -966,7 +966,7 @@
      * The color scheme to use for the selected list item elements.
      *
      * @property selectedItemColor
-     * @type string
+     * @type {string}
      * @default "green"
      */
     selectedItemColor: "green",
@@ -974,7 +974,7 @@
      * The color scheme to use for the button elements.
      *
      * @property buttonColor
-     * @type string
+     * @type {string}
      * @default "primary"
      */
     buttonColor: "primary",
@@ -982,7 +982,7 @@
      * The color scheme to use for the list header elements.
      *
      * @property headerColor
-     * @type string
+     * @type {string}
      * @default "mdb-color"
      */
     headerColor: "mdb-color",
