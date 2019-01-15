@@ -1,8 +1,4 @@
 // Variables
-//
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
-
 // Colors
 $mdb-color-lighten-5:  #d0d6e2 !default;
 $mdb-color-lighten-4:  #b1bace !default;
@@ -869,7 +865,6 @@ $note: map-merge((
   "note-light": #0f0f0f
 ), $note);
 
-// Variables
 // Fonts
 $roboto-font-path:            "../font/roboto/" !default;
 
@@ -1246,4 +1241,3 @@ $stepper-vertical-li-after-height:                  $stepper-horizontal-small-li
 $stepper-vertical-li-after-left:                    $stepper-horizontal-small-li-after-left !default;
 $stepper-vertical-li-after-top:                     3.44rem !default;
 $stepper-vertical-li-after-bgc:                     $stepper-horizontal-li-after-bgc !default;
-
