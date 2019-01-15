@@ -7,11 +7,10 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "npm run build-sass && npm run build-sass-min && npm run build-js && npm run build-js-min",
+    "build": "npm run build-sass && npm run build-sass-min && npm run build-js",
     "build-sass": "cd css && sass openMultiSelect.scss:openMultiSelect.css",
     "build-sass-min": "cd css && sass openMultiSelect.scss:openMultiSelect.min.css --style=compressed",
-    "build-js": "cd js && npx babel openMultiSelect.js --out-file openMultiSelect_compiled.js --source-maps",
-    "build-js-min": "cd js && uglifyjs openMultiSelect_compiled.js -c -m -o openMultiSelect.min.js --config-file ../uglifyjs.json"
+    "build-js": "cd js && uglifyjs openMultiSelect.js -c -m -o openMultiSelect.min.js --config-file ../uglifyjs.json"
   },
   "repository": {
     "type": "git",
@@ -39,8 +38,6 @@
     "eslint-plugin-react": "^7.12.3",
     "eslint-config-google": "^0.11.0",
     "eslint-plugin-jquery": "^1.5.0",
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "uglify-es": "^3.3.9",
     "sass": "^1.16.0"
