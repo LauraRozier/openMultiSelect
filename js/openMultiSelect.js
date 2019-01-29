@@ -164,7 +164,7 @@
     /**
      * Holds the DOM element for this plugin instance
      *
-     * @var {DOM} element
+     * @var {HTMLElement} element
      */
     this.element = aElement;
     /**
@@ -425,6 +425,8 @@
      * @param {boolean} aIndRedraw Indicates that the element should be redrawn
      * on success. Default: `true`
      *
+     * @return {boolean}
+     *
      * @example
      * $("#oms-div").openMultiSelect("reloadAvailableItems");
      * @example
@@ -466,7 +468,7 @@
           this.settings.ajax
       );
       this.items = ITEMS_DEFAULTS;
-
+      if (ajaxSettings.availableUrl === null) return true;
       // Reload using AJAX
       $.ajax({
         url: ajaxSettings.availableUrl,
@@ -496,6 +498,8 @@
      * items. Pass `null` to keep the original url. Default: `null`
      * @param {boolean} aIndRedraw Indicates that the element should be redrawn
      * on success. Default: `true`
+     *
+     * @return {boolean}
      *
      * @example
      * $("#oms-div").openMultiSelect("reloadSelectedItems");
@@ -538,7 +542,7 @@
           this.settings.ajax
       );
       this.items = ITEMS_DEFAULTS;
-
+      if (ajaxSettings.selectedUrl === null) return true;
       // Reload using AJAX
       $.ajax({
         url: ajaxSettings.selectedUrl,
