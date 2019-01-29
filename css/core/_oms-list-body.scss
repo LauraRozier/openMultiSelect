@@ -12,8 +12,8 @@
 .oms-list-body {
     overflow-y: scroll;
     height: $oms-list-body-height;
-    display: -ms-flexbox;
-    display: flex;
+    //display: -ms-flexbox;
+    //display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }

@@ -828,6 +828,23 @@
               this.buttonElement,
               this.selectedElement
           ));
+      const ua = navigator.userAgent.toLowerCase();
+
+      if (
+        ua.indexOf("msie") > -1 ||
+        ua.indexOf("trident/") > -1 ||
+        ua.indexOf("edge/") > -1 ||
+        ua.indexOf("opera") > -1 ||
+        ua.indexOf("opr/") > -1
+      ) {
+        const overflowFix = {
+          "padding-right": "20px",
+          "overflow-x": "hidden",
+        };
+        this.availableElement.find(".oms-list-body").css(overflowFix);
+        this.selectedElement.find(".oms-list-body").css(overflowFix);
+      }
+
       if (this.settings.ajax !== null) this.reloadItems();
     },
 
