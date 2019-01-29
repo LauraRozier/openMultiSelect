@@ -602,13 +602,8 @@
           ? aSelectedUrl
           : null;
       aIndRedraw = (typeof aIndRedraw !== "undefined") ? aIndRedraw : true;
-
-      if (
-        this.reloadAvailableItems(aAvailableUrl, false) &&
-        this.reloadSelectedItems(aSelectedUrl, false)
-      ) {
-        if (aIndRedraw === true) this.render();
-      }
+      this.reloadAvailableItems(aAvailableUrl, aIndRedraw);
+      this.reloadSelectedItems(aSelectedUrl, aIndRedraw);
     },
 
     /**
