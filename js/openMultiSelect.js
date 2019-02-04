@@ -265,9 +265,9 @@
       aEvent.stopImmediatePropagation();
 
       const $caller = $(aEvent.target).removeClass(
-          "oms-item-" + aEvent.data.settings.availableItemColor
+          "btn-" + aEvent.data.settings.availableItemColor
       ).addClass(
-          "oms-item-" + aEvent.data.settings.selectedItemColor
+          "btn-" + aEvent.data.settings.selectedItemColor
       ).off("click").click(aEvent.data, aEvent.data.cbUnselectItem);
 
       aEvent.data.items.selected.push($caller.val());
@@ -290,9 +290,9 @@
       aEvent.stopImmediatePropagation();
 
       const $caller = $(aEvent.target).removeClass(
-          "oms-item-" + aEvent.data.settings.selectedItemColor
+          "btn-" + aEvent.data.settings.selectedItemColor
       ).addClass(
-          "oms-item-" + aEvent.data.settings.availableItemColor
+          "btn-" + aEvent.data.settings.availableItemColor
       ).off("click").click(aEvent.data, aEvent.data.cbSelectItem);
 
       aEvent.data.items.selected = aEvent.data.arrayRemove(
@@ -334,14 +334,14 @@
       aEvent.stopImmediatePropagation();
 
       const items = aEvent.data.availableElement.find(".oms-list-body")
-          .find(".oms-item");
+          .find(".btn");
 
       $.each(items, function(index, value) {
         const $value = $(value);
         aEvent.data.items.selected.push($value.val());
         $value.removeClass(
-            "oms-item-" + aEvent.data.settings.availableItemColor
-        ).addClass("oms-item-" + aEvent.data.settings.selectedItemColor)
+            "btn-" + aEvent.data.settings.availableItemColor
+        ).addClass("btn-" + aEvent.data.settings.selectedItemColor)
             .off("click").click(aEvent.data, aEvent.data.cbUnselectItem)
             .appendTo(aEvent.data.selectedElement.find(".oms-list-body"));
       });
@@ -364,7 +364,7 @@
       aEvent.stopImmediatePropagation();
 
       const items = aEvent.data.selectedElement.find(".oms-list-body")
-          .find(".oms-item");
+          .find(".btn");
 
       $.each(items, function(index, value) {
         const $value = $(value);
@@ -373,8 +373,8 @@
             $value.val()
         );
         $value.removeClass(
-            "oms-item-" + aEvent.data.settings.selectedItemColor
-        ).addClass("oms-item-" + aEvent.data.settings.availableItemColor)
+            "btn-" + aEvent.data.settings.selectedItemColor
+        ).addClass("btn-" + aEvent.data.settings.availableItemColor)
             .off("click").click(aEvent.data, aEvent.data.cbSelectItem)
             .appendTo(aEvent.data.availableElement.find(".oms-list-body"));
       });
@@ -398,16 +398,17 @@
       this.valueElement.val(JSON.stringify(this.items.selected));
 
       $.each(this.items.available, (function(index, value) {
-        const listItem = $("<span />").attr({class: "oms-item"})
-            .text(value.text).val(value.value);
+        const listItem = $("<button />").attr({
+          class: "btn btn-sm btn-block mb-1",
+        }).text(value.text).val(value.value);
 
         if (this.arrayContains(value.value, this.items.selected)) {
           seBody.append(listItem.addClass(
-              "oms-item-" + this.settings.selectedItemColor
+              "btn-" + this.settings.selectedItemColor
           ).click(this, this.cbUnselectItem));
         } else {
           aeBody.append(listItem.addClass(
-              "oms-item-" + this.settings.availableItemColor
+              "btn-" + this.settings.availableItemColor
           ).click(this, this.cbSelectItem));
         }
       }).bind(this));
@@ -812,13 +813,16 @@
           );
       this.buttonElement = $("<div />").attr({class: "oms-controls"}).append(
           $("<button />").attr({
-            class: "btn btn-block btn-" + this.settings.buttonColor + " mb-1",
+            class: "btn btn-sm btn-block btn-" + this.settings.buttonColor +
+              " mb-1",
           }).text("Reset Selection").click(this, this.cbResetSelection),
           $("<button />").attr({
-            class: "btn btn-block btn-" + this.settings.buttonColor + " mt-3",
+            class: "btn btn-sm btn-block btn-" + this.settings.buttonColor +
+              " mt-3",
           }).text("Select All").click(this, this.cbSelectAll),
           $("<button />").attr({
-            class: "btn btn-block btn-" + this.settings.buttonColor + " mt-3",
+            class: "btn btn-sm btn-block btn-" + this.settings.buttonColor +
+              " mt-3",
           }).text("Unselect All").click(this, this.cbUnselectAll)
       );
       this.$element.append($("<div />").attr({class: "row mt-5 mb-4 clearfix"})

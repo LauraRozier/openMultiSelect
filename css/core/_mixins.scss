@@ -17,32 +17,3 @@
         color: set-notification-text-color($color) !important;
     }
 }
-
-// Make oms-item-color
-@mixin make-oms-item-color ($name, $color) {
-    .oms-item-#{$name} {
-        background-color: $color !important;
-        color: set-notification-text-color($color) !important;
-        &:hover {
-            background-color: lighten($color, 5%);
-        }
-        &:focus,
-        &.focus {
-            box-shadow: $z-depth-1-half;
-        }
-        &:focus,
-        &:active,
-        &.active {
-            background-color: darken($color, 20%);
-        }
-        &:not([disabled]):not(.disabled):active,
-        &:not([disabled]):not(.disabled).active {
-            box-shadow: $z-depth-1-half;
-            background-color: darken($color, 20%) !important;
-        }
-        &:not([disabled]):not(.disabled):active:focus,
-        &:not([disabled]):not(.disabled).active:focus {
-            box-shadow: $z-depth-1-half;
-        }
-    }
-}
